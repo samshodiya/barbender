@@ -1,0 +1,9 @@
+- amazon.aws.ec2:
+    key_name: samfixbreakfix
+    instance_type: t2.micro 
+    image: ami-04d29b6f966df1537  
+    wait: yes
+    group: default
+    count: 1
+    vpc_subnet_id: subnet-abdf58cd
+    assign_public_ip: yes
