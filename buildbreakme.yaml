@@ -4,7 +4,7 @@
   hosts: localhost
   name: "Create a sandbox instance"
   tasks: 
-    - 
+    - name: Launch instance
       amazon.aws.ec2: 
         assign_public_ip: true
         group: "{{ security_group }}"
