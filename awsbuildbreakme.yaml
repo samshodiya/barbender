@@ -1,5 +1,5 @@
 --- 
-- 
+ 
   gather_facts: false
   hosts: localhost
   name: Create a sandbox instance
@@ -21,3 +21,6 @@
     keypair: samfixbreakfix
     region: us-east-1
     security_group: default
+    
+    
+    
