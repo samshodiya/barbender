@@ -14,7 +14,6 @@
         region: "{{ region }}"
         vpc_subnet_id: subnet-abdf58cd
         wait: true
-      name: "Launch instance"
       register: ec2
   vars: 
     image: ami-04d29b6f966df1537
