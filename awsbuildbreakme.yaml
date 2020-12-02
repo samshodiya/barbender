@@ -5,7 +5,7 @@
   name: Create a sandbox instance
   tasks: 
     - name: Launch instance
-      community.aws.ec2: 
+       
         assign_public_ip: true
         group: "{{ security_group }}"
         image: "{{ image }}"
