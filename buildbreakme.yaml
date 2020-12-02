@@ -2,7 +2,7 @@
 - 
   gather_facts: false
   hosts: localhost
-  name: "Create a sandbox instance"
+  name: Create a sandbox instance
   tasks: 
     - name: Launch instance
       amazon.aws.ec2: 
