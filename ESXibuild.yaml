@@ -1,0 +1,34 @@
+---
+- name: ESXi VM build
+  hosts: localhost
+  connection: local
+  gather_facts: no
+  tasks:
+  - name: Clone the template
+    vmware_guest:
+      datacenter: dcname
+      name: {{ item.vmname }}
+      disk:
+      - datastore: datastore1
+        size_gb: '17'
+        type: thin
+      folder: /
+      hardware:
+        memory_mb: 1024
+        num_cpu_cores_per_socket: 1
+        num_cpus: 1
+      networks:
+      - device_type: type?
+        gateway: {{ item.gateway }}
+        ip: {{ item.ipaddress }}
+        name: {{ item.device_name }}
+        netmask: {{ item.netmask }}
+        type: static
+      state: poweredon
+      template: Redhat7_template
+      validate_certs: 'False'
+      wait_for_ip_address: 'yes'
+    with_items: 
+      - { vm_name: server1, ipaddress: 192.168.10.4, netmask: 255.255.255.0, gateway: 192.168.10.1, device_name: eno1 }
+      - { vm_name: server2, ipaddress: 192.168.10.5, netmask: 255.255.255.0, gateway: 192.168.10.1, device_name: eno1 }
+      - { vm_name: server3, ipaddress: 192.168.10.6, netmask: 255.255.255.0, gateway: 192.168.10.1, device_name: eno1 }
