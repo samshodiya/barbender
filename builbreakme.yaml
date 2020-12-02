@@ -1,21 +1,24 @@
-- name: Create a sandbox instance
+--- 
+- 
+  gather_facts: false
   hosts: localhost
-  gather_facts: False
-  vars:
-    keypair: samfixbreakfix
+  name: "Create a sandbox instance"
+  tasks: 
+    - 
+      amazon.aws.ec2: 
+        assign_public_ip: true
+        group: "{{ security_group }}"
+        image: "{{ image }}"
+        instance_type: "{{ instance_type }}"
+        key_name: "{{ keypair }}"
+        region: "{{ region }}"
+        vpc_subnet_id: subnet-abdf58cd
+        wait: true
+      name: "Launch instance"
+      register: ec2
+  vars: 
+    image: ami-04d29b6f966df1537
     instance_type: t2.micro
-    security_group: default
-    image: ami-04d29b6f966df1537 
+    keypair: samfixbreakfix
     region: us-east-1
-  tasks:
-   - name: Launch instance
-     amazon.aws.ec2:
-         key_name: "{{ keypair }}"
-         group: "{{ security_group }}"
-         instance_type: "{{ instance_type }}"
-         image: "{{ image }}"
-         wait: true
-         region: "{{ region }}"
-         vpc_subnet_id: subnet-abdf58cd
-         assign_public_ip: yes
-     register: ec2
+    security_group: default
