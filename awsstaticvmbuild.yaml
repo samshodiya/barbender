@@ -11,8 +11,8 @@ capacity_reservation_specification:
   capacity_reservation_preference: open
 client_token: '160685555321196707'
 cpu_options:
-  core_count: 4
-  threads_per_core: 2
+  core_count: 6
+  threads_per_core: 4
 ebs_optimized: true
 ena_support: true
 hibernation_options:
