@@ -1,0 +1,91 @@
+ami_launch_index: 0
+architecture: x86_64
+block_device_mappings:
+  - device_name: /dev/sda1
+    ebs:
+      attach_time: '2020-12-01T20:47:27+00:00'
+      delete_on_termination: true
+      status: attached
+      volume_id: vol-02b07568e01ca4588
+capacity_reservation_specification:
+  capacity_reservation_preference: open
+client_token: '160685555321196707'
+cpu_options:
+  core_count: 4
+  threads_per_core: 2
+ebs_optimized: true
+ena_support: true
+hibernation_options:
+  configured: false
+hypervisor: xen
+image_id: ami-0fafd0513ee08d902
+instance_id: i-0ce471348a9387f21
+instance_type: m4.2xlarge
+key_name: samfixbreakfix
+launch_time: '2020-12-02T13:19:30+00:00'
+monitoring:
+  state: disabled
+network_interfaces:
+  - association:
+      ip_owner_id: amazon
+      public_dns_name: ec2-35-172-137-15.compute-1.amazonaws.com
+      public_ip: 35.172.137.15
+    attachment:
+      attach_time: '2020-12-01T20:47:25+00:00'
+      attachment_id: eni-attach-0b05015ca842ed442
+      delete_on_termination: true
+      device_index: 0
+      status: attached
+    description: ''
+    groups:
+      - group_id: sg-05ee01f94c0a5b2aa
+        group_name: CentOS 8 Latest-CentOS-8-2-20200616-8GiB-AutogenByAWSMP-
+    interface_type: interface
+    ipv6_addresses: []
+    mac_address: '0e:ef:03:cc:8a:c5'
+    network_interface_id: eni-055fd3b61c238e87c
+    owner_id: '255696272144'
+    private_dns_name: ip-172-31-45-74.ec2.internal
+    private_ip_address: 172.31.45.74
+    private_ip_addresses:
+      - association:
+          ip_owner_id: amazon
+          public_dns_name: ec2-35-172-137-15.compute-1.amazonaws.com
+          public_ip: 35.172.137.15
+        primary: true
+        private_dns_name: ip-172-31-45-74.ec2.internal
+        private_ip_address: 172.31.45.75
+    source_dest_check: true
+    status: in-use
+    subnet_id: subnet-6d8c0c32
+    vpc_id: vpc-54a27129
+owner_id: '255696272144'
+placement:
+  availability_zone: us-east-1a
+  group_name: ''
+  region: us-east-1
+  tenancy: default
+private_dns_name: ip-172-31-45-74.ec2.internal
+private_ip_address: 172.31.45.74
+product_codes:
+  - product_code_id: 6cnyop7xninwp66xyzky5c54n
+    product_code_type: marketplace
+public_dns_name: ec2-35-172-137-15.compute-1.amazonaws.com
+public_ip_address: 35.172.137.15
+requester_id: ''
+reservation_id: r-0e452438b9fa5c58f
+root_device_name: /dev/sda1
+root_device_type: ebs
+security_groups:
+  - group_id: sg-05ee01f94c0a5b2aa
+    group_name: CentOS 8 Latest-CentOS-8-2-20200616-8GiB-AutogenByAWSMP-
+source_dest_check: true
+state:
+  code: 16
+  name: running
+state_transition_reason: ''
+subnet_id: subnet-6d8c0c32
+tags:
+  Name: AnsibleTowerAWX-1-MR-ONE
+virtualization_type: hvm
+vpc_id: vpc-54a27129
