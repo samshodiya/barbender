@@ -10,13 +10,13 @@
       name: {{ item.vmname }}
       disk:
       - datastore: datastore1
-        size_gb: '100'
+        size_gb: '300'
         type: thin
       folder: /
       hardware:
         memory_mb: 8192
-        num_cpu_cores_per_socket: 4
-        num_cpus: 8
+        num_cpu_cores_per_socket: 8
+        num_cpus: 16
       networks:
       - device_type: type?
         gateway: {{ item.gateway }}
