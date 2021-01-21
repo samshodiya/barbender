@@ -1,2 +1,2 @@
 # barbender
-code to bend bars in the gym
+code to bend bars
